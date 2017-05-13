@@ -4,7 +4,7 @@ var express = require("express"),
     bodyParser = require("body-parser");
 
 var app = express(),
-    port = process.env.PORT || 8080;
+    PORT = process.env.PORT || 8080;
 
 
 var db = require("./models");
@@ -29,4 +29,4 @@ app.use("/", routes);
 db.sequelize.sync({}).then(function () {
 
 });
-app.listen(port);
+app.listen(PORT);
